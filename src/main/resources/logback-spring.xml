@@ -21,8 +21,8 @@
 			class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
 			<!-- <Pattern>%5p [%X{traceId:-},%X{spanId:-}]</Pattern> -->
 			<!-- <Pattern>traceId ,spanId %d %p %C{1} [%t] %m%n</Pattern> -->
-			<pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} %5p [${springAppName},%X{traceId},
-				%X{spanId}]---- %m%n</pattern>
+			<pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} %5p [%X{traceId},
+				%X{spanId}]</pattern>
 		</encoder>
 	</appender>
 	
@@ -33,11 +33,11 @@
 			class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
 			<!-- <Pattern>%5p [%X{traceId:-},%X{spanId:-}]</Pattern> -->
 			<!-- <Pattern>traceId ,spanId %d %p %C{1} [%t] %m%n</Pattern> -->
-			<pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} %5p [${springAppName},%X{traceId},
-				%X{spanId}]---- %m%n</pattern>
+			<pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} %5p [%X{traceId},
+				%X{spanId}]</pattern>
 		</encoder>
 	</appender>
-	<root level="INFO">
+	<root level="DEBUG">
 		<appender-ref ref="RollingFile" />
 		<appender-ref ref="Console" />
 	</root>
